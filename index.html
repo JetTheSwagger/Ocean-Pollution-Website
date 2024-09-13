@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../Final/styles/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:ital,wght@0,700;1,300;1,500&display=swap" rel="stylesheet">
+  <title>Home Page</title>
+</head>
+  <body> 
+    <div class="container">
+
+      <div class="navbar">
+        <a href="index.html">
+          <img src="../Final/images/logo.png" class="logo">
+        </a>
+        
+        <h2>Blue Horizon Aware</h2>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+        <img src="../Final/images/menu.png" class="menu-icon">
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <h1>Ocean Pollution</h1>
+            <p>Pollution of the earth's largest bodies of waters, oceans, can take several forms. Once contaminated by these eight pollution sources, many delicate ecosystems need a long time to recover.</p>
+            
+            <a href="learnmore.html">
+              <button type="button">Learn More</button>
+            </a>
+
+        </div>
+        <div class="col">
+          <div class="card card1">
+            <h5>Pollution From Dumping</h5>
+            <p>80% of the pollution in oceans comes from land, and only 20% occurs in the oceans itself.</p>
+          </div>
+          <div class="card card2">
+            <h5>Nutrient Pollution</h5>
+            <p>Increase in nutrients especially nitrogen and phosphorus that causes eutrophication and lack of oxygen.</p>
+          </div>
+          <div class="card card3">
+            <h5>Oil Pollution</h5>
+            <p>Petroleum products used for fuel are mined from the earth deep below the ocean surfaces.</p>
+          </div>
+          <div class="card card4">
+            <h5>Agricultural Runoff</h5>
+            <p>Many contaminants enters rivers and streams, which then transport these hazardous substances into the ocean</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="showdate">
+        <span id="creationDate"></span> <br>
+        <span id="lastUpdate"></span> <br>
+        <span id="datacollectionDate"></span>
+      </div>
+    
+      <script>
+        var currentDate = new Date();
+        var creationDate = new Date('December 11, 2023');
+        var datacollectionDate = new Date();
+  
+        var formattedDate = currentDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        var formattedCreationDate = creationDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        document.getElementById('lastUpdate').innerHTML = 'Last Update: ' + formattedDate;
+        document.getElementById('creationDate').innerHTML = 'Date Created: ' + formattedCreationDate;
+        document.getElementById('datacollectionDate').innerHTML = 'Data Collected: ' + formattedDate;
+    </script>
+    </div>
+
+  </body>
+</html>

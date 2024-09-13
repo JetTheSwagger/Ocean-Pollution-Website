@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../Final/styles/about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:ital,wght@0,700;1,300;1,500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">
+              <img src="../Final/images/logo.png" class="logo">
+            </a>
+            
+            <h2>Blue Horizon Aware</h2>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </nav>
+            <img src="../Final/images/menu.png" class="menu-icon">
+          </div>
+
+          <div class="box">
+            <div class="box-details">
+                <h1 class="title">About Us</h1>
+                <h2 class="title"></h2>
+                <h5 class="subtitle">
+                    Welcome to Blue Horizon Aware, a digital initiative dedicated to fostering awareness and understanding of the critical issue of ocean pollution. Our platform is committed to providing comprehensive insights into the challenges our oceans face, with the ultimate goal of inspiring informed action. Here is an overview of Blue Horizon Aware: <br> <br>
+                </h5>
+            </div>
+          <div class="box">
+            <div class="box-details">
+              <h1 class="title">Mission</h1>
+              <h5 class="subtitle">
+                At Blue Horizon Aware, our mission is to be a catalyst for change by raising awareness about the pervasive problem of ocean pollution. We believe that informed individuals can drive collective action, and our platform serves as a hub for knowledge dissemination and advocacy.
+              </h5>
+            </div>
+
+            <div class="box">
+              <div class="box-details">
+                <h1 class="title">Objectives</h1>
+                <ol class="subtitleList">
+                  <li><b>Raise Consciousness:</b> We strive to elevate public consciousness regarding the severe consequences of ocean pollution. Through accessible and engaging content, we aim to communicate the urgency of addressing this issue.</li> <br><br>
+                  <li><b>Educate and Inform:</b> Blue Horizon Aware is dedicated to providing accurate and comprehensive information about the various facets of ocean pollution. From the sources of contamination to its impact on marine ecosystems, our content is designed to enlighten visitors.</li> <br><br>
+                  <li><b>Promote Sustainable Practices:</b> Beyond awareness, we actively promote sustainable practices that contribute to the reduction and prevention of ocean pollution. Our platform offers practical tips and guidance on adopting eco-friendly habits for a more sustainable future.</li> <br><br>
+                </ol>
+              </div>
+
+              <div class="box">
+                <div class="box-details">
+                  <h1 class="title">What Sets Us Apart</h1>
+                  <ol class="subtitleList">
+                    <li><b>Actionable Insights: </b> Blue Horizon Aware doesn't stop at awareness; we provide actionable insights. Our content is geared towards empowering individuals to make tangible changes in their lifestyles. We believe that informed choices, no matter how small, contribute significantly to the larger goal of combatting ocean pollution.</li> <br><br>
+                    <li><b>Community Engagement:</b> We foster a sense of community by encouraging active participation. Through forums, discussions, and collaborative initiatives, we aim to connect like-minded individuals who share a common commitment to ocean conservation. Blue Horizon Aware is not just a website but a hub for community-driven environmental advocacy.</li> <br><br>
+                    <li><b>Global Perspective:</b> Recognizing the global nature of ocean pollution, we strive to present information that is relevant on a worldwide scale. Our content addresses diverse geographical challenges and solutions, making Blue Horizon Aware a valuable resource for individuals from various backgrounds and regions.</li> <br><br>
+                  </ol>
+                </div>
+
+                <div class="box">
+                  <div class="box-details">
+                    <h1 class="title">Our Commitment:</h1>
+                    <h5 class="subtitle">
+                      Blue Horizon Aware is not just a website; it's a commitment to positive change. We are dedicated to cultivating a community of individuals who are not only aware of the challenges our oceans face but are also actively contributing to their preservation.
+
+                      Thank you for joining us on this journey toward a cleaner, healthier, and more sustainable marine environment. Explore our content, engage with our resources, and be part of the movement to safeguard our oceans for future generations.
+
+                      Together, let's make a difference. Welcome to Blue Horizon Aware!
+                    </h5>
+                  </div>
+        </div>
+
+        <div class="showdate">
+          <span id="creationDate"></span> <br>
+          <span id="lastUpdate"></span> <br>
+          <span id="datacollectionDate"></span>
+        </div>
+      
+        <script>
+          var currentDate = new Date();
+          var creationDate = new Date('December 11, 2023');
+          var datacollectionDate = new Date();
+    
+          var formattedDate = currentDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+          var formattedCreationDate = creationDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  
+          document.getElementById('lastUpdate').innerHTML = 'Last Update: ' + formattedDate;
+          document.getElementById('creationDate').innerHTML = 'Date Created: ' + formattedCreationDate;
+          document.getElementById('datacollectionDate').innerHTML = 'Data Collected: ' + formattedDate;
+      </script>
+    </div>
+</body>
+</html>

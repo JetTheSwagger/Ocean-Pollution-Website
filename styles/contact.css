@@ -1,0 +1,229 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(https://2ea.co.uk/wp-content/uploads/2023/05/Overfishing.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.navbar h2{
+    color: #f1f5f9;
+    text-shadow: 0 0 5px #155e75;
+    padding-left: 10px;
+}
+
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.menu-icon{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #67e8f9;
+    font-size: 16px;
+}
+
+.contact-box{
+    background-color: #f1f5f9;
+    display: flex;
+    border-radius: 10px;
+}
+
+.contact-left{
+    flex-basis: 80%;
+    padding: 40px 60px;
+    background: #f1f5f9;
+    color: #6495ED;
+    border-radius: 10px 0 0 10px;
+}
+
+.contact-right{
+    flex-basis: 30%;
+    padding: 40px;
+    background: #0891b2;
+    color: #6495ED;
+    border-radius: 0 10px 10px 0;
+}
+
+h1{
+    margin-bottom: 10px;
+    color: #f1f5f9;
+}
+
+h2{
+    color: #070a13;
+}
+
+p{
+    color: #f1f5f9;
+    margin-bottom: 40px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-basis: 45%;
+}
+
+.input-group{
+    flex-basis: 45%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0891b2;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #0891b2;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: #070a13;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: #155e75;
+    cursor: pointer;
+    font: bold;
+    color: #f1f5f9;
+    height: 35px;
+    width: 100px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+
+.contact-left h2{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h2{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+    color: #f1f5f9;
+    
+}
+
+.showdate{
+    color: #f1f5f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* form part */
+
+#form{
+    /* width: 300px; */
+    /* margin: 20vh auto 0 auto; */
+    padding: 20px;
+    background-color: #f1f5f9;
+    border-radius: 5%;
+    font-size: 12px;
+}
+
+#form h1{
+    color: #155e75;
+    text-align: center;
+}
+
+#form button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: #f1f5f9;
+    background-color: #155e75;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control{
+    flex-direction: column;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    flex-basis: 45%;
+}
+
+.input-control input{
+    border: 2px solid #155e75;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus{
+    outline: 0;
+}
+
+.input-control.success input{
+    border-color: #09c372;
+}
+
+.input-control.error input{
+    border-color: #ff0000;
+}
+
+.input-control .error {
+    border-color: #ff0000;
+    font-size: 10px;
+    height: 13px;
+}

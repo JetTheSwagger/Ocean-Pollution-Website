@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../Final/styles/contact.css">
+    <script type="text/javascript" src="../Final/script/myscript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,700;1,300;1,500&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="../Final/images/logo.png" class="logo">
+              </a>
+            <h2>Blue Horizon Aware</h2>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="../Final/images/menu.png" class="menu-icon">
+        </div>
+
+        <h1>Contact Us</h1>
+        <p>
+            We would be happy to help you with any of your problems.<br> Feel free to get in touch with us
+        </p>
+
+        <div class="contact-box">
+            <div class="contact-left">
+                <h2>Information</h2>
+                <form id="form">
+                    <div class="input-row">
+                            <div class="input-group">
+                                <div class="input-control">
+                                    <label for="username">Username</label>
+                                    <input id="username" name="username" type="text" placeholder="Zack">
+                                    <div class="error"></div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-control">
+                                    <label for="phoneNumber">Phone Number</label>
+                                    <input id="phoneNumber" name="phoneNumber" type="text" placeholder=" +60 10 448 332">
+                                    <div class="error"></div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="input-row">
+                            <div class="input-group">
+                                <div class="input-control">
+                                    <label for="username">Email</label>
+                                    <input id="email" name="email" type="text" placeholder="example@gmail.com">
+                                    <div class="error"></div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-control">
+                                    <label for="country">Country</label>
+                                    <input id="country" name="country" type="text" placeholder="Malaysia">
+                                    <div class="error"></div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <label>Question</label>
+                    <textarea rows="6" placeholder="no onion?"></textarea>
+                    <button type="submit" value="Click Me" >Send</button>
+
+                </form>
+            </div>
+
+            <div class="contact-right">
+                <h2>Reach Us</h2>
+
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td>contactus@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>+60 10 333 4444</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>
+                            No. 66 Jalan Kenari,<br> Taman Kenari,<br> 43000 KAJANG,<br> SELANGOR,<br> MALAYSIA
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="showdate">
+            <span id="creationDate"></span> <br>
+            <span id="lastUpdate"></span> <br>
+            <span id="datacollectionDate"></span>
+        </div>
+    </div>
+    
+    <script>
+        var currentDate = new Date();
+        var creationDate = new Date('December 11, 2023');
+        var datacollectionDate = new Date();
+  
+        var formattedDate = currentDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        var formattedCreationDate = creationDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        document.getElementById('lastUpdate').innerHTML = 'Last Update: ' + formattedDate;
+        document.getElementById('creationDate').innerHTML = 'Date Created: ' + formattedCreationDate;
+        document.getElementById('datacollectionDate').innerHTML = 'Data Collect: ' + formattedDate;
+
+        const form = document.getElementById('form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const phoneNumber = document.getElementById('phoneNumber');
+        const country = document.getElementById('country');
+
+        form.addEventListener('submit', e=>{
+            e.preventDefault();
+            validateInputs();
+        });
+
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+
+            errorDisplay.innerText = message;
+            inputControl.classList.add('error');
+            inputControl.classList.remove('success');
+        }
+
+        const setSuccess = (element) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+
+            errorDisplay.innerText = '';
+            inputControl.classList.add('success');
+            inputControl.classList.remove('error');
+        }
+
+        const isValidEmail = email => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase())
+        }
+
+        const validateInputs = () => {
+            //get values from inputs
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            const phoneValue = phoneNumber.value.trim();
+            const countryValue = country.value.trim();
+
+            if(usernameValue === ''){
+                //show error
+                //add error class
+                setError(username, 'Username cannot be blank');
+            }else{
+                //add success class
+                setSuccess(username);
+            }
+
+            if(emailValue === ''){
+                setError(email, 'Email cannot be blank');
+            }else if(!isValidEmail(emailValue)){
+                setError(email, 'Email is not valid');
+            }else{
+                setSuccess(email);
+            }
+
+            if(phoneValue === ''){
+                setError(phoneNumber, 'Phone Number cannot be blank');
+            }else if (phoneValue.length < 8){
+                setError(phoneNumber, 'Phone Number must be at least 10 characters');
+            }else{
+                setSuccess(phoneNumber);
+            }
+
+            if(countryValue === ''){
+                setError(country, 'Country cannot be blank');
+            }else{
+                setSuccess(country);
+            }
+        };
+
+    </script>
+
+</body>
+</html>

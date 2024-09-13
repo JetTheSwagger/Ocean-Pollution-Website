@@ -1,0 +1,187 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(https://2ea.co.uk/wp-content/uploads/2023/05/Overfishing.png);
+    background-position: center;
+    background-size: cover;
+    /* padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box; */
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+/* for nav bar */
+.navbar h2{
+    color: #f1f5f9;
+    text-shadow: 0 0 5px #155e75;
+    padding-left: 10px;
+}
+
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.menu-icon{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #67e8f9;
+    font-size: 16px;
+}
+
+/* for login form */
+
+.container{
+    position: relative;
+    top: 80%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #f1f5f9;
+    border-radius: 10px;
+
+}
+
+.container h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.container form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .textbox{
+    position: relative;
+    border-bottom: 2px solid #155e75;
+    margin: 30px 0;
+}
+
+.textbox input{
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    height: 40px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.textbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #155e75;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.textbox span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #155e75;
+}
+
+.textbox input:focus ~ label,
+.textbox input:valid ~ label{
+    top: -5px;
+    color: #155e75;
+}
+
+.textbox input:focus ~ span::before,
+.textbox input:valid ~ span ::before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.password{
+    margin: -5px 0 20px 5px;
+    color: #155e75;
+    cursor: pointer;
+}
+
+.password:hover{
+    text-decoration: underline;
+}   
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #155e75;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #f1f5f9;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #f1f5f9;
+    transition: 0.5s;
+}
+
+.link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #7c3aed;
+}
+
+.link a{
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+.link a:hover{
+    text-decoration: underline;
+}
+
+.showdate{
+    color: #155e75;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}

@@ -1,0 +1,202 @@
+/* 
+These are the colours used for the whole website
+Acts as a reference for all my CSS
+    --clr-light: #f1f5f9;
+    --clr-cyan300: #67e8f9;
+    --clr-cyan600: #0891b2;
+    --clr-cyan800: #155e75;
+    --clr-violet: #7c3aed;
+    --clr-green: #16a34a;
+ */
+
+ body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(https://2ea.co.uk/wp-content/uploads/2023/05/Overfishing.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.navbar h2{
+    color: #f1f5f9;
+    text-shadow: 0 0 5px #155e75;
+    padding-left: 10px;
+}
+
+
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.menu-icon{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #67e8f9;
+    font-size: 16px;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col{
+    flex-basis: 70%;
+}
+
+h1{
+    color: #0891b2;
+    font-size: 100px;
+}
+
+p{
+    color: #f1f5f9;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+button{
+    width: 180px;
+    color: #0891b2;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #f1f5f9;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    transition: transforms 0.5s ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.card{
+    display: flex;
+    width: 240px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transforms 0.5s;
+}
+
+.card p{
+    text-shadow: 0 0 15px #155e75;
+    font-size: 10px;
+}
+
+.card1{
+    background-image: url(https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341400/EducationHub/photos/river-pollution.jpg);
+}
+
+.card2{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/05/58/23/10/1000_F_558231035_LtjQI3776FeXnZivTqH7DRGyJI3sJfQ8.jpg);
+}
+
+.card3{
+    background-image: url(https://images.nationalgeographic.org/image/upload/v1638892026/EducationHub/photos/water-pollution.jpg);
+}
+
+.card4{
+    background-image: url(https://i.guim.co.uk/img/media/f5108293ddff6c1b5887c80194b9a110d6c13258/0_739_3898_2339/master/3898.jpg?width=620&dpr=1&s=none);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    color: #f1f5f9;
+    text-shadow: 0 0 5px #155e75;
+}
+
+.box{
+    border-top: 8px solid #155e75;
+    padding: 2rem 1rem;
+}
+
+.box-details{
+    text-align: center;
+}
+
+.title{
+    /* font-size: 2.5rem;
+    color: #f1f5f9;
+    text-shadow: 0 0 5px #155e75; */
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #67e8f9;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    color: #f1f5f9;
+}
+
+.image-container{
+    width: 100%;
+    position: relative;
+}
+
+.box-image{
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.showdate{
+    color: #f1f5f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
